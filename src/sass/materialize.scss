@@ -41,3 +41,45 @@
 @import "components/timepicker";
 
 
+
+// GLOBAL ----------------
+html {
+    scroll-behavior: smooth;
+  }
+
+// NAV -------------------
+
+// TOP MAIN --------------
+header{
+    height: 90vh;
+    padding-top: 10%;
+    background-color: #ccc;
+}
+
+//ABOUT ----------------
+.about{
+    height: 100vh;
+    padding-top: 10%;
+    background-color: #eee;
+}
+
+//PORTFOLIO-----------
+.portfolio{
+    height: 100vh;
+    padding-top: 10%;
+    background-color: #aaa;
+}
+
+//SKILLS-----------
+.skills{
+    height: 100vh;
+    padding-top: 10%;
+    background-color: #bbb;
+}
+
+//CONTACT-----------
+.contact{
+    height: 100vh;
+    padding-top: 15%;
+    background-color: #eee;
+}

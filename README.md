@@ -18,9 +18,9 @@ mine is VS code!!
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Materialize.css](https://github.com/dogfalo/materialize/) - css framework used
+* [gulp](https://github.com/gulpjs/gulp) - bulid system
+* [sass](https://github.com/sass/sass) - css preprocessor
 
 ## Contributing
 
