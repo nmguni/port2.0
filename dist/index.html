@@ -16,22 +16,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body id="home">
     <!-- nav -->
-    <div class="navbar-fixed">
+    <div class=" navbar-fixed">
         <nav>
-            <div class="container">
+            <div class=" container">
 
                 <div class=" nav-wrapper">
+                    <a href="#!" class="brand-logo">
+                        <i class="fas fa-code"></i>
+                    </a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
                         <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
                             <a href="#about">about</a>
                         </li>
                         <li>
-                            <a href="#portfolio">portfolio</a>
+                            <a href="#port">portfolio</a>
                         </li>
                         <li>
                             <a href="#skills">skills</a>
@@ -42,23 +48,26 @@
                     </ul>
                 </div>
         </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li>
-                <a href="#about">about</a>
-            </li>
-            <li>
-                <a href="#portfolio">portfolio</a>
-            </li>
-            <li>
-                <a href="#skills">skills</a>
-            </li>
-            <li>
-                <a href="#contact">contact</a>
-            </li>
-        </ul>
         </div>
     </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#port">Portfolio</a>
+        </li>
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
     <!-- top page -->
 
     <header class="head">
@@ -69,8 +78,6 @@
                         <h6>hello I'm</h6>
                         <h4>Ndumiso Mguni</h4>
                         <h5>front end developer</h5>
-                        <p>ndumiso29@gmail.com</p>
-                        <p>London On</p>
                         <ul>
                             <li>
                                 <i class="far fa-envelope fa-lg p-2"></i>
@@ -83,23 +90,17 @@
                                 <i class="fas fa-map-marker-alt fa-lg p-2"></i>London On
                             </li>
                         </ul>
-                        <ul class="header-icons">
-                            <li>
-                                <a href="https://github.com/nmguni" target="_blank">
-                                    <i class="fab fa-github fa-lg"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/Ndumiso_29" target="_blank">
-                                    <i class="fab fa-twitter fa-lg"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://codepen.io/dashboard/" target="_blank">
-                                    <i class="fab fa-codepen fa-lg"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="header_icons">
+                            <a href="https://github.com/nmguni" target="_blank">
+                                <i class="fab fa-github fa-lg"></i>
+                            </a>
+                            <a href="https://twitter.com/Ndumiso_29" target="_blank">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                            <a href="https://codepen.io/dashboard/" target="_blank">
+                                <i class="fab fa-codepen fa-lg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col s12 m2"></div>
@@ -120,16 +121,17 @@
                 </div>
                 <div class="col s12 m2"></div>
                 <div class="col s12 m5">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi quos inventore, aliquid provident reiciendis
-                        vitae facere odio exercitationem sapiente nesciunt, assumenda quae eligendi? Vel natus omnis rem
-                        rerum labore laborum?</p>
+                    <h4>About Me</h4>
+                    <p>Hello, I am a passionate lifelong learner. What does that mean to me personally? It means I am a curious
+                        person who enjoys figuring out how things work. When faced with a challenge or a ‘bug’ in a line
+                        of code, I see it as a learning opportunity. Right now, I don't know everything there is about web
+                        development but that's OK, I accept the challenge</p>
                     <ul>
                         <li>HTML</li>
-                        <li>css & scss</li>
+                        <li>scss</li>
                         <li>Bootstrap </li>
-                        <li>Materialize css</li>
+                        <li>Materialize</li>
                         <li>JavaScript</li>
-                        <li>git</li>
                     </ul>
                 </div>
             </div>
