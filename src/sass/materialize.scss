@@ -46,38 +46,53 @@
 }
 @mixin custom_box_shadow{
     box-shadow: rgba(0,0,0,0.65) 2px 2px 2px 1px;
-
+}
+@mixin custon_text_fade{
+    color: rgba(0, 0, 0, 0.664);
 }
 // GLOBAL ----------------
 html {
+    
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif; 
   }
 
 // NAV -------------------
 nav{
-    text-transform: capitalize;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
     letter-spacing: 1.5px;
+    font-weight: 600;
+    a{
+        color: rgb(0, 8, 56)!important;
+    }
 
 }
 // TOP MAIN --------------
+.light-overlay{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
 header{
-    height: 90vh;
+    height: 100vh;
     padding-top: 10%;
-    background-color: #fff;
+   
     .info {
         text-transform: capitalize;
         letter-spacing: 1.5px;
 
         h6{
-            @extend  .blue, .darken-1;
-            color: rgba(255, 255, 255, 0.938);
-            width: 20%;
-            padding: 2px;
+             @extend  .blue, .darken-2;
+            color: rgb(255, 255, 255);
+            width: 25%;
+            padding: 3px;
             text-align: center;
             text-transform: capitalize;
-            border-radius: 5px 5px 5px 0;
+            border-radius: 7px 7px 7px 0;
             box-shadow: rgba(0,0,0,0.65) 2px 2px 2px 1px;
         }
         h4{
@@ -94,19 +109,25 @@ header{
                 a{
                     color: #000;
                     &:hover{
-                        @extend .blue-text, .text-darken-4;
+                        @extend .blue-text, .text-darken-2;
                     }
                 }
                 
             }
+            i{
+                padding: 3px;
+                &:hover{
+                    @extend .blue-text, .text-darken-2;
+                }
+            }
         }
         .header_icons{
             a{
-               @include secondary-blue();
+                color: #000;
                 padding: 8px 15px 8px 0;
                 text-shadow: rgba(0,0,0,0.65) 1px 1px .5px;
                 &:hover{
-                    @extend .blue-text, .text-darken-4;
+                    @extend .blue-text, .text-darken-2;
                 }
             }
            
@@ -115,20 +136,65 @@ header{
     }  
 }
 
+.bg-img{
+    background-image: url("/img/BrutalLifeCycleJavascript.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 //ABOUT ----------------
 .about{
+    @include custon_text_fade();
     height: 100vh;
+
     padding-top: 10%;
-    // @extend .blue, .lighten-4;
-    ul{
-        li{
-            display: inline;
-            margin: 5px;
-            padding: 5px; 
-            @extend  .blue, .darken-1;
-            border-radius: 5px;
-            @include custom_box_shadow();
-            color: #fff;
+    letter-spacing: 1.2px;
+ .about_me{
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 5px;
+    h5{
+        @extend .blue-text, .text-darken-3;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    span{
+        @extend  .blue, .darken-2;
+        padding: 1px 2px 1px 2px ;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+    }
+ }
+    .stack{
+        p{
+            margin: 0;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .color-text{
+            @extend .blue-text, .text-darken-3;
+        }
+    }
+    .resume{
+        padding: 10px 0 0 0px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        p{
+            margin: 0;
+        }
+        a{
+         @include custon_text_fade();
+            &:hover{
+                color: #fff;
+                @extend  .blue, .darken-2;
+                border-radius: 5px;
+                padding: 2px;
+            }
+            
         }
     }
 }
@@ -138,6 +204,10 @@ header{
     height: 100vh;
     padding-top: 10%;
     background-color: #aaa;
+    .col{
+        // padding: 40px;
+        padding: 10px;
+    }
 }
 
 //SKILLS-----------
@@ -152,4 +222,14 @@ header{
     height: 100vh;
     padding-top: 15%;
     background-color: #eee;
+}
+
+
+.portfolio{
+    .grid-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    }
 }
