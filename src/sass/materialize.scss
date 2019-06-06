@@ -51,8 +51,7 @@
     color: rgba(0, 0, 0, 0.664);
 }
 // GLOBAL ----------------
-html {
-    
+html {  
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif; 
   }
@@ -65,6 +64,12 @@ nav{
     font-weight: 600;
     a{
         color: rgb(0, 8, 56)!important;
+    }
+    .brand-logo{
+        img{
+            margin: 10px 0px 0px 5px;
+            
+        }
     }
 
 }
@@ -199,22 +204,89 @@ header{
     }
 }
 
-//PORTFOLIO-----------
+//PORTFOLIO----------- 
 .portfolio{
     height: 100vh;
     padding-top: 10%;
-    background-color: #aaa;
-    .col{
-        // padding: 40px;
-        padding: 10px;
+    @include custon_text_fade();
+    h5{
+        @extend .blue-text, .text-darken-3;
+        font-weight: 700;
+       
+    }
+    p{
+         font-weight: 600;
+    }
+    a{
+        color: #fff;
+        @extend  .blue, .darken-2;
+        margin:5px 5px 0 0;
+        border-radius: 4px;
+   
+    }
+    .no-color{
+        background-color: #fff!important;
+        @extend .blue-text, .text-darken-3;
+    }
+    .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    }
+    img{
+        border-radius: 4px;
+        -webkit-box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
+        box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
     }
 }
 
 //SKILLS-----------
 .skills{
+    // background-color: #eee;
+    
     height: 100vh;
     padding-top: 10%;
-    background-color: #bbb;
+    .technical{
+        // @extend .blue, .darken-4;
+        background-color: #0d48a1d8;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        line-height: 2.5em; 
+        -webkit-box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
+        
+        h3{
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        strong{
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        hr{
+            border: #fff 2px solid; 
+        }
+    }
+    .professional{
+        color: #0d48a1d8;
+        // border: #0d48a1d8  2px solid;
+        border-radius: 5px;
+        line-height: 2.3em; 
+        h3{
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        strong{
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        hr{
+            border: #0d48a1d8 2px solid; 
+        }
+    }
 }
 
 //CONTACT-----------
@@ -222,14 +294,25 @@ header{
     height: 100vh;
     padding-top: 15%;
     background-color: #eee;
+    background-image: url("/img/Manchester-map-preview-1.png");
+    background-size: cover;
+  background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+ 
+  
+}
+.light-overlay-bottom{
+ position: relative;
+ top: -115px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.904);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-
-.portfolio{
-    .grid-container{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    }
-}
