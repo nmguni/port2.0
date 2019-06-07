@@ -54,6 +54,8 @@
 html {  
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
   }
 
 // NAV -------------------
@@ -171,6 +173,7 @@ header{
         border-radius: 4px;
         color: #fff;
         font-weight: 500;
+        @include custom_box_shadow();
     }
  }
     .stack{
@@ -245,8 +248,9 @@ header{
 .skills{
     // background-color: #eee;
     
-    height: 100vh;
+    height: 100%;
     padding-top: 10%;
+    padding-bottom: 10%;
     .technical{
         // @extend .blue, .darken-4;
         background-color: #0d48a1d8;
@@ -291,28 +295,92 @@ box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
 
 //CONTACT-----------
 .contact{
-    height: 100vh;
-    padding-top: 15%;
-    background-color: #eee;
-    background-image: url("/img/Manchester-map-preview-1.png");
-    background-size: cover;
-  background-repeat: no-repeat;
+     background-image: url("/img/Manchester-map-preview-1.png");
+     background-size: cover;
+     background-repeat: no-repeat;
+     font-size: 2rem;
+     @include custon_text_fade();
+     h4{
+         font-weight: 600;
+         @extend .blue-text, .text-darken-3;
+         
+     }
+     p{
+         font-size: 1.5rem;
+         font-weight: 600;
+         
+     }
+     i{
+        
+             
+         letter-spacing: 1.5px;
+         color: #0d48a1c0;
+         padding: 0px 15px 0px 15px;        
+     } 
+    
+     .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        margin: auto 0;
+        }
+}
+
+.grid-item{
+    i:hover{
+        color: #fff;
+        background-color: #0d48a1d8;
+        border-radius: 5px;
+        @include custom_box_shadow();
+    }
+}
+
+.light-overlay-3 {
+    //  position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
-   
- 
-  
-}
-.light-overlay-bottom{
- position: relative;
- top: -115px;
-  width: 100%;
-  min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.904);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  }
 
-}
 
+
+  // media querys
+  @media only screen and (max-width: 900px) {
+   .portfolio{
+       height: 100%;
+       .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+       }
+   }
+  }
+  @media only screen and (max-width: 800px) {
+    .portfolio{
+        height: 100%;
+        .grid-container{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-gap: 10px;
+        }
+    }
+   }
+
+   @media only screen and (max-width: 600px) {
+    .portfolio{
+        height: 100%;
+        .grid-container{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-gap: 10px;
+         .grid-item{
+             
+                 text-align: center;
+             
+         }
+        }
+    }
+   }
