@@ -7,11 +7,13 @@
     "build": "gulp",
     "css": "gulp scss",
     "js": "gulp js",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://github.com/nmguni/blog",
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-transform-arrow-functions": "^7.2.0",
@@ -19,7 +21,7 @@
     "@babel/plugin-transform-classes": "^7.4.4",
     "@babel/plugin-transform-object-super": "^7.2.0",
     "@babel/plugin-transform-template-literals": "^7.4.4",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
@@ -29,5 +31,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.20.1"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
